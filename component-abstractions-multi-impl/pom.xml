@@ -13,6 +13,6 @@
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-    <artifactId>bean-register</artifactId>
+    <artifactId>component-abstractions-multi-impl</artifactId>
 
 </project>

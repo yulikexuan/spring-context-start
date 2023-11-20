@@ -10,7 +10,7 @@
 		<groupId>spring.start.here</groupId>
 		<artifactId>spring-context-start</artifactId>
 		<version>1.0.0</version>
-		<relativePath>../</relativePath>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 
     <artifactId>bean-annotation</artifactId>

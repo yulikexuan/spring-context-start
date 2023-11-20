@@ -101,6 +101,14 @@
         <module>bean-register</module>
 		<module>bean-annotation</module>
         <module>component-annotation</module>
+        <module>bean-wiring</module>
+        <module>bean-wiring-auto</module>
+        <module>bean-choosing</module>
+        <module>bean-wiring-abstractions</module>
+        <module>component-abstractions</module>
+        <module>component-abstractions-multi-impl</module>
+        <module>bean-instantiation</module>
+        <module>bean-scope</module>
     </modules>
 
 </project>
