@@ -4,7 +4,7 @@
 package app.config;
 
 
-import app.aspect.LoggingAspect;
+import app.aspect.ToLoggingAnnotationAspect;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -16,9 +16,14 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @ComponentScan(basePackages = {"app.service", "app.aspect"})
 public class AppConfig {
 
+//    @Bean
+//    LoggingAspect loggingAspect() {
+//        return LoggingAspect.of();
+//    }
+
     @Bean
-    LoggingAspect loggingAspect() {
-        return LoggingAspect.of();
+    ToLoggingAnnotationAspect toLoggingAnnotationAspect() {
+        return ToLoggingAnnotationAspect.of();
     }
 
 }///:~
