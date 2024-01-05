@@ -5,6 +5,7 @@ package app.config;
 
 
 import app.aspect.LoggingAspect;
+import app.aspect.SecurityAspect;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -19,6 +20,11 @@ public class AppConfig {
     @Bean
     LoggingAspect loggingAspect() {
         return LoggingAspect.of();
+    }
+
+    @Bean
+    SecurityAspect securityAspect() {
+        return SecurityAspect.of();
     }
 
 }///:~

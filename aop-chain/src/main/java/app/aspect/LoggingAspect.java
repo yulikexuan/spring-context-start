@@ -4,16 +4,13 @@
 package app.aspect;
 
 
-import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.Around;
-
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 
-import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 
 
 @Slf4j
@@ -21,7 +18,7 @@ import java.util.Optional;
 @NoArgsConstructor(staticName = "of")
 public class LoggingAspect {
 
-    @Around("execution(* app.service.*.*(..))")
+    @Around("@annotation(ToLogging)")
     public Object log(ProceedingJoinPoint joinPoint) throws Throwable {
 
         String methodName = joinPoint.getSignature().getName();
@@ -37,7 +34,7 @@ public class LoggingAspect {
             result = joinPoint.proceed();
         }
 
-        log.info(">>> After executing a service call {}", methodName);
+        log.info(">>> Result {} After executing a service call {}", result, methodName);
 
         return result;
     }

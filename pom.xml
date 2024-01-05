@@ -150,6 +150,7 @@
         <module>bean-instantiation</module>
         <module>bean-scope</module>
         <module>aop-start</module>
+        <module>aop-chain</module>
     </modules>
 
 </project>
